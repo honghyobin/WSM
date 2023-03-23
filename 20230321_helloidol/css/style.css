@@ -1,0 +1,13 @@
+selector {
+    attribute: value;
+}
+*
+#id 
+.class
+TAG  a
+selector1 selector2
+selector1 > selector2
+selector1, selector2
+selector1 + selector2
+selector1 
+` selector2
