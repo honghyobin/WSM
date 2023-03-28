@@ -1,3 +1,7 @@
+#style 적용 3가지 방법
+1.<..style="..."> in HTML
+
+
 selector {
     attribute: value;
 }
