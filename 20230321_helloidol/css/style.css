@@ -1,3 +1,15 @@
 body{
     background-color: beige;
 }
+/* h1의 자매인 모든 h2에 plum 배경색   ctrl+/-주석 */
+h1~h2{  /*h1은 해당 안됨*/
+    /* background-color: plum; */
+}
+/* h1의 자매 중 첫번째 h2만 hlum 배경색 */
+h1+h2{  /*h1 기준 첫번째 자매는 h2임 그래서 h1+h3은 안됌*/
+    background-color: plum;
+}
+/* h1과 h2는 plum 배경색 */
+h1,h2{
+    background-color: plum;
+}
