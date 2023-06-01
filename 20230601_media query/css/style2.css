@@ -1,0 +1,21 @@
+/* mobile */
+@media screen and (min-width: 1px) {  /*1은 없어도 ㄱㅊ*/
+    body{
+        background-color: chartreuse;
+    }
+    
+}
+
+/* tablet */
+@media screen and (min-width: 541px) {
+    body{
+        background-color: dodgerblue;
+        
+    }
+}
+/* desktop */
+@media screen and (min-width: 721px) {
+    body{
+        background-color: crimson;
+    }
+}

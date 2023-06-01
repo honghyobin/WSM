@@ -1,0 +1,19 @@
+/*desktop*/
+body{
+    background-color: crimson;
+}
+/* table */
+/*최대 너비가 720px 일 때, 적용 즉, 720px보다 작을 때 적용(720 일 때도 적용됨 )*/
+@media screen and (max-width: 720px) {
+    body{
+        background-color: dodgerblue;
+    }
+}
+/* mobile */
+/*최대 너비가 540px 일 때, 적용 즉, 540px보다 작을 때 적용*/
+@media screen and (max-width: 540px) {
+    body{
+        background-color: chartreuse;
+    }
+    
+}
