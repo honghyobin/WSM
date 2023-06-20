@@ -83,6 +83,8 @@ nav{
         height: 0;/*처음에 안 보이게*/
 
         transition: all 0.4s;
+        overflow: hidden;/*height :  0인데도 내용이 넘치면 안 보이게*/
+      
     }
     .nav-item{
         padding: 1em 0; /*item의 위 아래 여백*/
@@ -96,6 +98,7 @@ nav{
         visibility: visible;
         position: absolute;/*햄버거메뉴 공간을 차지하지 않게 .nav-logo를 가운데*/
         right: 16px;/*햄버거메뉴 원위치*/
+        cursor: pointer;/*손가락모양*/
     }
 
     /*.show-menu하면, .nav-list보이게
