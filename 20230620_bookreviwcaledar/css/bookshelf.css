@@ -1,0 +1,22 @@
+.bookshelf{
+    margin-top: calc(44px + 100px); /*연산자를 붙여 쓰면 안됨 양 옆 뛰어쓰기 calc는 계산기*/
+    display: flex; /*수평배열 row-container로 2개씩 나옴 */
+    gap: 80px;/*이미지 공간주기 column-gap : 80px; 과 row-gap : 80px와 같다*/
+    flex-wrap: wrap;/*길면 내려쓰자*/
+    justify-content: center;/*메인 축(수평) 가운데로*/
+}
+.row-container{
+    display: flex; /*2개씩 붙어 있는 것도 옆으로*/
+    column-gap: 80px;/*2개씩 붙어 있는 이미지 간격 벌리기*/
+    align-items: flex-end;/*교차축 밑에 정렬하자*/
+}
+.book-item > img{
+    width: 150px;
+    box-shadow: 0 16px 32px #dddddd;/*그림자를 x좌표로 0px / 그림자의 y좌표로 16px / 그림자의 범짐 / 색*/
+    transition: all 0.2s;/*마우스 올릴때 내릴때 모두 적용 됨*/
+}
+.book-item>img:hover{
+    transform: translateY(-4px);/*마우스를 올렸을 때 이미지 위로 올리기*/
+    box-shadow: 0 24px 48px #e1e1e1;/*그림자를 x좌표로 0px / 그림자의 y좌표로 16px / 그림자의 범짐 / 색*/
+    /* transition: all 1s;  마우스를 내릴때는 적용 안됨*/
+}
