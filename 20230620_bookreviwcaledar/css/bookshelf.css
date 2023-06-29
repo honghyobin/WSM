@@ -4,6 +4,9 @@
     gap: 80px;/*이미지 공간주기 column-gap : 80px; 과 row-gap : 80px와 같다*/
     flex-wrap: wrap;/*길면 내려쓰자*/
     justify-content: center;/*메인 축(수평) 가운데로*/
+    max-width: calc(150px * 4 + 80px * 3); /*한 줄에 최대 2개의 row-containe, 4개의 book-itme*/
+    margin-left: auto; /*좁아진 bookshelf 자체를 가운데로*/
+    margin-right: auto;/*좁아진 bookshelf 자체를 가운데로*/
 }
 .row-container{
     display: flex; /*2개씩 붙어 있는 것도 옆으로*/
