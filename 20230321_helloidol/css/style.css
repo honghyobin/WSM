@@ -45,6 +45,6 @@ li:nth-child(5n){ /*5n 5의 배수*/
 ul:nth-child(3) > li:nth-child(2):hover{
     text-decoration:overline;
 }
-/*body > div:nth-child(8) > */ul:nth-child(3) > li:nth-child(2){
+body > div:nth-child(8) > ul:nth-child(3) > li:nth-child(2){ /*body > div:nth-child(8)을 생략해도 됨*/
     font-size: 8px;
 }
