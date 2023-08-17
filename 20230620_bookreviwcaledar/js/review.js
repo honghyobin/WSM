@@ -11,6 +11,11 @@ console.log(`bookId: ${bookId}, type : ${typeof bookId}`);
     let bookIdNumber=parseInt(bookId); //string -> number
     //let bookIdNumber=bookId * 1; //string -> number
 console.log(`bookIdNumber: ${bookId}, type: ${typeof bookIdNumber}`); //3,number
+//bookId가 null이면, index.html로 가자
+if(bookId == null){
+    //window.open("index.html",target="_top");  //새로운 창이 생기는거 X
+   window.location.href="index.html";
+}
 
 // -> books에서 하나씩 꺼내어 bookIdNumber랑 꺼낸 book의 id랑 같으면 데이터 빼자 : bookData
 // bookIdNumber : URL에서 가져온 id 값 === books 하나씩 꺼낸 book의 id 값
