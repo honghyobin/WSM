@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container *{
+    border: 2px solid black;
+}
+figure>img{
+    width: 200px;
+    height: 100px;
+    object-fit: cover; /*이미지를 잘라서 크기에 맞춤*/   /* contain; 옆 여백*/
+}
+
+html{
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 200px 3fr 1fr;
+    grid-template-rows: 44px 1fr 80px;
+    grid-template-areas:
+    "header header header"
+    "side2 main side_left"
+    "footer footer footer";
+}
+.header{
+    background-color: chartreuse;
+    grid-area: header;
+}
+.side1{
+    background-color: gold;
+    grid-area: side_left;
+}
+.main{
+    background-color: green;
+    grid-area: main;
+}
+.side2{
+    background-color: gray;
+    grid-area: side2;
+}
+.footer{
+    background-color: aquamarine;
+    grid-area: footer;
+}
