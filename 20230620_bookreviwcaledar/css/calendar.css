@@ -1,0 +1,22 @@
+main{
+    margin-top: calc(44px + 100px);
+}
+
+.title.flex-container{
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    column-gap:40px; /*화살표 띄우기*/
+}
+
+.weekday.container{
+    display: grid;
+    grid-template-columns: repeat(7,1fr); /*가로방향으로 7개 1비율로 */
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* 지울거임 */
+main * {
+    border: 2px solid black;
+}
