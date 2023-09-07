@@ -1,5 +1,8 @@
 main{
-    margin-top: calc(44px + 100px);
+    margin: 0 auto; /*위 아래 : 0, 양옆 : auto*/
+    margin-top: calc(44px + 100px); /*다시 margin-top 주기*/
+    width: calc(100% - 100px * 2);
+    max-width: 600px;
 }
 
 .title.flex-container{
@@ -7,6 +10,7 @@ main{
     font-size: 2rem;
     justify-content: center;
     column-gap:40px; /*화살표 띄우기*/
+    margin-bottom: 20px;
 }
 
 .weekday.container{
@@ -14,9 +18,50 @@ main{
     grid-template-columns: repeat(7,1fr); /*가로방향으로 7개 1비율로 */
     text-align: center;
     font-size: 1.5rem;
+    background-color: lemonchiffon;
+    border-radius: 10px; /*둥글게*/
+    padding: 10px;
 }
 
-/* 지울거임 */
-main * {
-    border: 2px solid black;
+.dates.container{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 10px;
+}
+
+.date.item{
+    padding: 10px;
+    aspect-ratio: 1/1; /*1 : 1 비율*/
+    /*display: flex;
+    justify-content: center; 수평 가운데*/
+    /*align-items: center; 수직 가운데*/
+    display: grid;
+    place-items: center; /*가운데 배치*/
+}
+.date.item:nth-child(1){
+    /* 열 1 -> 6 */
+    grid-column-start: 6;
+}
+.review.flex-container{
+    display: flex;
+    flex-direction: column;/*수직배치*/
+    font-size: 1.25rem;
+    row-gap: 10px;
+    background-color: lemonchiffon;
+    border-radius: 10px; /*둥글게*/
+    padding: 10px;
+}
+
+/* table */
+@media screen and (max-width: 720px) {
+    
+}
+/* mobile */
+@media screen and (max-width: 540px) {
+    main{
+        margin-top: calc(44px + 40px);
+        width: calc(100% - 10px * 2);
+    }
 }
