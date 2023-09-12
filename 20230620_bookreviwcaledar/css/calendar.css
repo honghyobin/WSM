@@ -40,10 +40,10 @@ main{
     display: grid;
     place-items: center; /*가운데 배치*/
 }
-.date.item:nth-child(1){
-    /* 열 1 -> 6 */
+/* .date.item:nth-child(1){
+    /* 열 1 -> 6 
     grid-column-start: 6;
-}
+} */
 .review.flex-container{
     display: flex;
     flex-direction: column;/*수직배치*/
