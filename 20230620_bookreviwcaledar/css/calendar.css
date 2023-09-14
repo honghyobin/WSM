@@ -40,6 +40,15 @@ main{
     display: grid;
     place-items: center; /*가운데 배치*/
 }
+
+/* .date.item:nth-child(7n+2){
+    color: blue;
+}
+
+.date.item:nth-child(7n+3){
+    color: red;
+} */ /*이렇게 하면 다음달이나 이전달에 이상해짐*/
+
 /* .date.item:nth-child(1){
     /* 열 1 -> 6 
     grid-column-start: 6;
@@ -52,6 +61,10 @@ main{
     background-color: lemonchiffon;
     border-radius: 10px; /*둥글게*/
     padding: 10px;
+}
+
+.left, .right, .month{ /*마우스 손가락으로*/
+    cursor: pointer;
 }
 
 /* table */

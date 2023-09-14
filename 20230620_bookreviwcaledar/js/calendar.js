@@ -15,7 +15,7 @@ const setCalendar=(year, month) => {
     //html -> js
     const titleMonthDiv=document.getElementsByClassName('month')[0];
     //.innerHTML = `&{month}월`;
-    titleMonthDiv.innerHTML=`${month}월`;
+    titleMonthDiv.innerHTML=` ${year}년 ${month}월`;
 
     //달력 만들자
     //해당 월의 1일이 무슨 요일
@@ -47,7 +47,21 @@ const setCalendar=(year, month) => {
    //CSS {grid-column-start: firstDatedDay+1;}
    firstDateDiv.style.gridColumnStart=firstDateDay+1;
 
+   //토요일 파랑
+   let saturdayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n+${7-firstDateDay})`);
+   for (let dateItem of saturdayDivs){
+       dateItem.style.color="blue";
+   }
+   
+   //일요일 빨강
+   let sundayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n+${(7-firstDateDay+1)%7})`);
+   for(let dateItem of sundayDivs){
+       dateItem.style.color="red";
+   }
+
 }
+
+
 
 setCalendar(year,month);
 
@@ -75,6 +89,16 @@ leftDiv.onclick = () => {
     setCalendar(year,month)
 }
 //leftDiv.addEventListener("click", () => console.log(`${month}월`));
+
+//년 달 누르면 원래 달로 이동
+const thisMonthDiv=document.getElementsByClassName("month")[0];
+thisMonthDiv.onclick = () =>{
+    now=new Date();
+    year=now.getFullYear();
+    month=now.getMonth()+1;
+    setCalendar(year,month);
+}
+
 
 
 // > : 지난 달
