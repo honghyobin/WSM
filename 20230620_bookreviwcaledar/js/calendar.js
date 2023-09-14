@@ -25,8 +25,10 @@ const setCalendar=(year, month) => {
     //console.log(firstDateDay); //5
    // console.log(lastDate); //30
 
+   //원래 있던 달력의 .date.item clear
+   datesContainerDiv.replaceChildren();
+
    //.date.item{$}*lastDate
-   //<div class="date item">date</div>
    //for 1~lastDate
     for(let date=1; date<=lastDate; date++){
         // console.log(date);
@@ -54,8 +56,35 @@ setCalendar(year,month);
 // console.log(now, year, month,date);
 
 
-
-
 // < : 이전 달
-// > : 지난 달
+//html->js
+const leftDiv=document.getElementsByClassName("left")[0];
+leftDiv.onclick = () => {
+    month--;
+    // console.log(`${month}월`);
+    
+    if(month==0){
+        year--
+        month=12;
+    }//이게 아래 5줄 내용임
+    // year=thisMonthDateObject.getFullYear();
+    // month=thisMonthDateObject.getMonth()+1;
+    // let thisMonthDateObject=new Date(year, month-1);
+    // year=thisMonthDateObject.getFullYear();
+    // month=thisMonthDateObject.getMonth()+1;
+    setCalendar(year,month)
+}
+//leftDiv.addEventListener("click", () => console.log(`${month}월`));
 
+
+// > : 지난 달
+const rightDiv=document.getElementsByClassName("right")[0];
+rightDiv.onclick = () => {
+    month++;
+    // console.log(`${month}월`);
+    if(month==13){
+        year++
+        month=1;
+    }
+    setCalendar(year,month)
+}
